@@ -22,14 +22,38 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
+      - name: Find project root
+        run: |
+          if [ -f "BanglaCalendarFull/settings.gradle.kts" ]; then
+            cp -r BanglaCalendarFull/. .
+          elif [ -f "BanglaCalendar/settings.gradle.kts" ]; then
+            cp -r BanglaCalendar/. .
+          fi
+          echo "--- ROOT FILES ---"
+          ls -la
+          echo "--- APP FILES ---"
+          ls -la app/ || true
+
       - name: Generate Gradle Wrapper
         run: gradle wrapper --gradle-version=8.9 --distribution-type=bin
 
       - name: Grant execute permission
         run: chmod +x ./gradlew
 
+      - name: Create dummy font files
+        run: |
+          mkdir -p app/src/main/res/font
+          for f in noto_serif_bengali_regular noto_serif_bengali_semibold noto_serif_bengali_bold noto_sans_bengali_regular noto_sans_bengali_medium noto_sans_bengali_semibold; do
+            if [ ! -f "app/src/main/res/font/${f}.ttf" ]; then
+              echo "Creating placeholder for ${f}.ttf"
+              cp /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf app/src/main/res/font/${f}.ttf 2>/dev/null || \
+              find /usr/share/fonts -name "*.ttf" | head -1 | xargs -I{} cp {} app/src/main/res/font/${f}.ttf
+            fi
+          done
+          ls -la app/src/main/res/font/
+
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --no-daemon
+        run: ./gradlew assembleDebug --no-daemon --stacktrace 2>&1 | tail -100
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
