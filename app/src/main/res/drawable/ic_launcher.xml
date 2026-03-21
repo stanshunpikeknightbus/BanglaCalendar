@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background circle -->
+    <path
+        android:fillColor="#C0392B"
+        android:pathData="M0,0 L108,0 L108,108 L0,108 Z" />
+
+    <!-- Calendar body white -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,36 L84,36 L84,84 L24,84 Z"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2" />
+
+    <!-- Calendar top bar red -->
+    <path
+        android:fillColor="#8B1A1A"
+        android:pathData="M24,28 L84,28 L84,40 L24,40 Z" />
+
+    <!-- Rings -->
+    <path
+        android:fillColor="#8B1A1A"
+        android:pathData="M38,22 Q38,30 38,30 Q36,30 36,28 L36,22 Q36,20 38,20 Q40,20 40,22 Z" />
+    <path
+        android:fillColor="#8B1A1A"
+        android:pathData="M70,22 Q70,30 70,30 Q68,30 68,28 L68,22 Q68,20 70,20 Q72,20 72,22 Z" />
+
+    <!-- Bengali ক letter for calendar -->
+    <path
+        android:fillColor="#C0392B"
+        android:pathData="M42,48 L42,72 M42,58 L54,48 M54,48 L54,72 M42,60 L54,60"
+        android:strokeColor="#C0392B"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Grid dots for calendar dates -->
+    <path
+        android:fillColor="#DDDDDD"
+        android:pathData="M30,52 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path
+        android:fillColor="#DDDDDD"
+        android:pathData="M64,52 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path
+        android:fillColor="#DDDDDD"
+        android:pathData="M76,52 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path
+        android:fillColor="#DDDDDD"
+        android:pathData="M30,64 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path
+        android:fillColor="#DDDDDD"
+        android:pathData="M64,64 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path
+        android:fillColor="#DDDDDD"
+        android:pathData="M76,64 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path
+        android:fillColor="#DDDDDD"
+        android:pathData="M30,76 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path
+        android:fillColor="#DDDDDD"
+        android:pathData="M42,76 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path
+        android:fillColor="#DDDDDD"
+        android:pathData="M54,76 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+</vector>

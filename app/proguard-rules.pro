@@ -1,0 +1,4 @@
+-keep class com.banglacalendar.domain.** { *; }
+-keep class com.banglacalendar.ui.widget.** { *; }
+-keep class androidx.glance.** { *; }
+-dontwarn androidx.compose.**

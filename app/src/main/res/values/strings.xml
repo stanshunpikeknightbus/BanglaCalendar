@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">বাংলা ক্যালেন্ডার</string>
+    <string name="today">আজকে</string>
+    <string name="prev_month">আগের মাস</string>
+    <string name="next_month">পরের মাস</string>
+    <string name="widget_description">আজকের বাংলা তারিখ দেখায়</string>
+    <string name="legend_title">রঙের অর্থ</string>
+    <string name="legend_friday">শুক্রবার — সরকারি ছুটি</string>
+    <string name="legend_saturday">শনিবার</string>
+    <string name="legend_today">আজকের তারিখ</string>
+</resources>
